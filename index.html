@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Resume Builder</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body data-theme="light">
+    <div class="container">
+
+        <button class="theme-switch" onclick="toggleTheme()">Switch Theme</button>
+        <h1>Resume Builder</h1>
+
+        <div class="section" id="inputSection">
+        <h2>Input Your Details</h2>
+
+        <label>Profile Picture</label>
+        <input type="file" id="profilePicInput" accept="image/*" />
+
+
+        <label>Full Name*</label>
+        <input type="text" id="Name" />
+
+        <label>Date of Birth*</label>
+        <input type="date" id="DOB"  />
+
+        <label>Email*</label>
+        <input type="email" id="email"/>
+
+        <label>Address*</label>
+        <input type="text" id="Address"  />
+
+        <label>Phone*</label>
+        <input type="text" id="phone" />
+
+        <label>Education*</label>
+        <textarea id="education_10" placeholder="High School"></textarea>
+
+        <textarea id="education_12" placeholder="ENter Mediate"></textarea>
+
+        <textarea id="education_Degree" placeholder="Graduation"></textarea>
+
+        <label>LinkedIn URL</label>
+        <input type="url" id="linkedin" />
+
+        <label>Skills*</label>
+        <textarea id="skills" ></textarea>
+
+        <label>Language*</label>
+        <input type="text" id="language"  />
+
+        <label>Hobbies*</label>
+        <input type="text" id="Hobbies" />
+
+        <label>Experience</label>
+        <textarea id="experience"></textarea>
+
+        <label>Projects</label>
+        <textarea id="projects"></textarea>
+
+        <label>Certifications</label>
+        <textarea id="certifications"></textarea>
+
+        <button onclick="generateResume()">Generate Resume</button>
+        </div>
+
+
+
+        <div id="resume" style="display: none; border: px solid black;">
+            
+            
+            <div style="width: 655px; height: 80px; border: 1px solid black; background-color: rgb(174, 248, 223);">
+                <h1 style="font-size: 35px;">Resume</h1>
+            </div>
+            
+            <div class="right" style="float: left;">
+            <div class="div_profile">
+                <img id="profilePicPreview" src="vanti.jpeg" alt="Profile Picture" class="pic" />
+                <h2 class="profile">Profile</h2>
+            </div>
+            <p class="p">
+                Hardworking College Student seeking Imployment. Adept in various social media platforms and office technology programs.
+                
+            </p>
+        
+            <h2 style="font-size: 25px;">Education</h2>
+             
+                  <h2>High School</h2>
+                  <p class="p" id="reducation_10"></p>
+
+                  <h2>Enter Mediate</h2>
+                  <p class="p" id="reducation_12"></p>
+
+                  <h2>Degree</h2>
+                  <p class="p" id="reducation_Degree"></p>
+              
+
+            
+                <h2 style="font-size: 25px;">Projects</h2>
+                <p id="rProjects"></p>
+
+                <h2 style="font-size: 25px;">Experience</h2>
+                <p id="rExperience"></p>
+            
+        
+        </div>
+
+        <div class="left" >
+            <div class="left_main">
+                <h1 style="border-bottom: 1px solid black; ">Details</h1>
+                <div style="margin-top: 5px;">
+
+                    <strong>Name:- <p id="rName"></p></strong>
+                    <strong>DOB:- &ensp;<p id="rDOB"></p> </strong>
+                    
+                    <strong >Ph. No:- <p id="rphone"></p></strong>
+                    
+                    <strong >Email:- </strong>
+                    <p id="remail"></p>
+                    <strong>&ensp; </strong>
+                    
+                    <strong >Add:-&ensp; <p id="rAddress"></p></strong>
+                </div>
+
+                <h2>Skills</h2>
+                <ul>
+                    <p id="rSkills"></p>
+                    <p id="rSkills_1"></p>
+                    <p id="rSkills_2"></p>
+                </ul>
+
+                <h3>Certifications</h3>
+                <ul>
+                    <p id="rCertifications"></p>
+                </ul>
+
+                <h2>Language</h2>
+                <ul>
+                   <li><p id="rlanguage"></p></li>
+                </ul>
+                <h2>Hobbies</h2>
+                <ul>
+                    <li><p id="rHobbies"></p></li>
+                    
+                </ul>
+            </div>
+        </div>
+
+
+
+            <button onclick="saveToPDF()">Download PDF</button>
+        </div>
+
+    </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+  
+  <script src="script.js"></script>
+  
+</body>
+</html>
